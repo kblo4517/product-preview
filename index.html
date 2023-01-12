@@ -5,34 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: #F3EAE3;
+      font-size: 10px;
+    }
+
+    h1, h2 {
+      font-family: 'Fraunces', serif;
+      text-align: left;
+    }
+    
+    p {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    img {
+      height: 300px;
+      width: 175px;
+      border-radius: 10px 0 0 10px;
+    }
+
+    img.icon {
+      height: auto;
+      width: auto;
+    }
+
+    button {
+      border: none;
+      border-radius: 5px;
+      background-color: #3D8168;
+      padding: 5px;
+      color: white;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #1A4031;
+    }
+
+    #card {
+      display: flex;
+      border-radius: 10px;
+      width: 350px;
+      height: 300px;
+      background-color: white;
+      /* postion relative is relative to the parent */
+      position: relative;
+      top: 100px;
+      margin: auto;
+    }
+
+    #card-details {
+      margin: 0 20px 0 20px;
+    }
+
+    #addToCart {
+      text-align: center;
+    }
+    #price {
+      color: #3D8168;
+    }
+    .price-details {
+      display: inline-block;
+    }
+  
+    @media screen and (max-width: 480px) {
+      #card { 
+        display: flex;
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
+  <div id="card">
+    <div id="card-image-container">  
+      <img src="./images/image-product-desktop.jpg" alt="">
+    </div>
 
-  Preview
+    <div id="card-details">
+      <p>PERFUME</p>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+    
+      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.</p> 
 
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  this is a change
-
-  Add to Cart
+      <div id="pricing">
+        <h2 id="price" class="price-details">$149.99</h2>
+        <small class="price-details"><p><s>$169.99</s></p></small>
+      </div>
+    
+      
+    
+      <div id="addToCart">
+        <button> <span><img class="icon" src="images/icon-cart.svg" alt=""></span>Add to Cart</button>
+      </div>
+      
+      
+    </div>
+  </div>
+ 
   
-  <div class="attribution">
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Kavon Blossom</a>.
-  </div>
+  </div> -->
 </body>
 </html>
